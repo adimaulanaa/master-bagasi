@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:product/features/detail_product_one.dart';
 import 'package:product/features/discuss_product_screen.dart';
 import 'package:product/features/utils/colors.dart';
 import 'package:product/features/utils/model.dart';
@@ -3246,29 +3247,39 @@ class _DashboardScreenState extends State<DashboardScreen> {
       scrollDirection: Axis.horizontal,
       child: Row(
         children: producCat
-            .map((e) => Column(
-                  children: [
-                    Image.asset(
-                      e.image.toString(),
-                      width: size.width * 0.4,
-                    ),
-                    Container(
-                      padding: const EdgeInsets.only(
-                          top: 10, bottom: 10, left: 15, right: 15),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8),
-                        color: AppColors.dashColorWhite,
+            .map((e) => InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const DetailProductOne(),
                       ),
-                      child: Text(
-                        e.text.toString(),
-                        style: const TextStyle(
-                          color: AppColors.dashColorBlack,
-                          fontSize: 10,
-                          fontWeight: FontWeight.w400,
+                    );
+                  },
+                  child: Column(
+                    children: [
+                      Image.asset(
+                        e.image.toString(),
+                        width: size.width * 0.4,
+                      ),
+                      Container(
+                        padding: const EdgeInsets.only(
+                            top: 10, bottom: 10, left: 15, right: 15),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(8),
+                          color: AppColors.dashColorWhite,
                         ),
-                      ),
-                    )
-                  ],
+                        child: Text(
+                          e.text.toString(),
+                          style: const TextStyle(
+                            color: AppColors.dashColorBlack,
+                            fontSize: 10,
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
                 ))
             .toList(),
       ),
