@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:product/features/detail_product_one.dart';
-import 'package:product/features/discuss_product_screen.dart';
-import 'package:product/features/utils/colors.dart';
-import 'package:product/features/utils/model.dart';
+import 'package:master_bagasi/features/detail_product_one.dart';
+import 'package:master_bagasi/features/discuss_product_screen.dart';
+import 'package:master_bagasi/features/utils/colors.dart';
+import 'package:master_bagasi/features/utils/model.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({super.key});
@@ -3249,12 +3249,27 @@ class _DashboardScreenState extends State<DashboardScreen> {
         children: producCat
             .map((e) => InkWell(
                   onTap: () {
+                    //! Screen Detail Product 1
                     Navigator.push(
                       context,
                       MaterialPageRoute(
                         builder: (context) => const DetailProductOne(),
                       ),
                     );
+                    //! Screen Detail Product 2
+                    // Navigator.push(
+                    //   context,
+                    //   MaterialPageRoute(
+                    //     builder: (context) => const DetailProductSecond(),
+                    //   ),
+                    // );
+                    //! Screen Detail Product 3
+                    // Navigator.push(
+                    //   context,
+                    //   MaterialPageRoute(
+                    //     builder: (context) => const DetailProductTree(),
+                    //   ),
+                    // );
                   },
                   child: Column(
                     children: [

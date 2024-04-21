@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:product/features/utils/colors.dart';
+import 'package:master_bagasi/features/utils/colors.dart';
 
 class DiscussProductScreen extends StatefulWidget {
   const DiscussProductScreen({super.key});

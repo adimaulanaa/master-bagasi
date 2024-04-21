@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:master_bagasi/features/utils/colors.dart';
 
-class DetailProductOne extends StatefulWidget {
-  const DetailProductOne({super.key});
+class DetailProductSecond extends StatefulWidget {
+  const DetailProductSecond({super.key});
 
   @override
-  State<DetailProductOne> createState() => _DetailProductOneState();
+  State<DetailProductSecond> createState() => _DetailProductSecondState();
 }
 
-class _DetailProductOneState extends State<DetailProductOne> {
+class _DetailProductSecondState extends State<DetailProductSecond> {
   //! love
   bool loveOne = false;
   bool loveSecond = false;
@@ -41,7 +41,7 @@ class _DetailProductOneState extends State<DetailProductOne> {
                 color: AppColors.dashColorWhite,
               ),
               child: Image.asset(
-                "assets/images/detail-product-1.png",
+                "assets/images/detail-product-2.png",
                 width: size.width * 0.17,
               ),
             ),
@@ -65,7 +65,7 @@ class _DetailProductOneState extends State<DetailProductOne> {
                   const Padding(
                     padding: EdgeInsets.only(top: 5, bottom: 5),
                     child: Text(
-                      'Rp178.200',
+                      'Rp96.700',
                       style: TextStyle(
                         color: AppColors.dashColorBlack,
                         fontSize: 24,
@@ -84,7 +84,7 @@ class _DetailProductOneState extends State<DetailProductOne> {
                         width: 5,
                       ),
                       const Text(
-                        '0.35 Kg',
+                        '0.17 Kg',
                         style: TextStyle(
                           color: AppColors.dashColorBlack,
                           fontSize: 16,
@@ -1476,13 +1476,13 @@ class _DetailProductOneState extends State<DetailProductOne> {
                 const EdgeInsets.only(left: 10, right: 10, top: 10, bottom: 10),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
-              color: AppColors.dashColorBlack,
+              color: AppColors.dashColorWhite,
+              border: Border.all(color: AppColors.dashColorBlack, width: 2),
             ),
             child: const Text(
               'Bundling Paru Pedas & Ikan Kayu Aceh',
               style: TextStyle(
-                color: AppColors.dashColorWhite,
-                fontSize: 14,
+                color: AppColors.dashColorBlack,
                 fontWeight: FontWeight.w400,
               ),
             ),
@@ -1497,13 +1497,12 @@ class _DetailProductOneState extends State<DetailProductOne> {
                     left: 10, right: 10, top: 10, bottom: 10),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: AppColors.dashColorWhite,
-                  border: Border.all(color: AppColors.dashColorBlack, width: 2),
+                  color: AppColors.dashColorBlack,
                 ),
                 child: const Text(
                   'Paru Pedas Aceh',
                   style: TextStyle(
-                    color: AppColors.dashColorBlack,
+                    color: AppColors.dashColorWhite,
                     fontSize: 14,
                     fontWeight: FontWeight.w400,
                   ),
