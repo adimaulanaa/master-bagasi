@@ -1561,9 +1561,12 @@ class _DetailProductSecondState extends State<DetailProductSecond> {
                         const SizedBox(
                           width: 10,
                         ),
-                        SvgPicture.asset(
-                          'assets/icons/arrows_left.svg',
-                          height: 15,
+                        InkWell(
+                          onTap: () => Navigator.pop(context),
+                          child: SvgPicture.asset(
+                            'assets/icons/arrows_left.svg',
+                            height: 15,
+                          ),
                         ),
                         const SizedBox(
                           width: 8,

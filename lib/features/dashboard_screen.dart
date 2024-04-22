@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:master_bagasi/features/detail_product_one.dart';
+import 'package:master_bagasi/features/detail_product_second.dart';
+import 'package:master_bagasi/features/detail_product_tree.dart';
 import 'package:master_bagasi/features/discuss_product_screen.dart';
 import 'package:master_bagasi/features/utils/colors.dart';
 import 'package:master_bagasi/features/utils/model.dart';
@@ -1093,304 +1095,326 @@ class _DashboardScreenState extends State<DashboardScreen> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Container(
-                height: size.height * 0.38,
-                width: size.width * 0.43,
-                decoration: const BoxDecoration(
-                  borderRadius: BorderRadius.only(
-                      topLeft: Radius.zero,
-                      topRight: Radius.circular(10),
-                      bottomLeft: Radius.circular(10),
-                      bottomRight: Radius.zero),
-                  color: AppColors.dashColorWhite,
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Image.asset("assets/images/viral-1.png"),
-                    Container(
-                      width: size.width,
-                      height: 1,
-                      color: AppColors.dashColorBlackSecond,
+              InkWell(
+                onTap: () {
+                  //! Screen Detail Product 3
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const DetailProductTree(),
                     ),
-                    const SizedBox(
-                      height: 5,
-                    ),
-                    const Padding(
-                      padding: EdgeInsets.only(left: 10, right: 10),
-                      child: Text(
-                        'Sariwangi - Teh Celup Asli',
-                        style: TextStyle(
-                          color: AppColors.dashColorBlack,
-                          fontSize: 11,
-                          fontWeight: FontWeight.w400,
+                  );
+                },
+                child: Container(
+                  height: size.height * 0.38,
+                  width: size.width * 0.43,
+                  decoration: const BoxDecoration(
+                    borderRadius: BorderRadius.only(
+                        topLeft: Radius.zero,
+                        topRight: Radius.circular(10),
+                        bottomLeft: Radius.circular(10),
+                        bottomRight: Radius.zero),
+                    color: AppColors.dashColorWhite,
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Image.asset("assets/images/viral-1.png"),
+                      Container(
+                        width: size.width,
+                        height: 1,
+                        color: AppColors.dashColorBlackSecond,
+                      ),
+                      const SizedBox(
+                        height: 5,
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.only(left: 10, right: 10),
+                        child: Text(
+                          'Sariwangi - Teh Celup Asli',
+                          style: TextStyle(
+                            color: AppColors.dashColorBlack,
+                            fontSize: 11,
+                            fontWeight: FontWeight.w400,
+                          ),
                         ),
                       ),
-                    ),
-                    const SizedBox(
-                      height: 15,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 10, right: 10),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          const Text(
-                            'Rp135.000',
-                            style: TextStyle(
-                              color: AppColors.dashColorBlack,
-                              fontSize: 13,
-                              fontWeight: FontWeight.w700,
-                            ),
-                          ),
-                          Row(
-                            children: [
-                              Container(
-                                width: 1,
-                                height: 20,
-                                color: AppColors.dashColorBlackSecond,
-                              ),
-                              const SizedBox(
-                                width: 10,
-                              ),
-                              const Text(
-                                '400g',
-                                style: TextStyle(
-                                  color: AppColors.dashColorBlack,
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.w700,
-                                ),
-                              ),
-                            ],
-                          )
-                        ],
+                      const SizedBox(
+                        height: 15,
                       ),
-                    ),
-                    const SizedBox(
-                      height: 5,
-                    ),
-                    const Padding(
-                      padding: EdgeInsets.only(left: 10, right: 10),
-                      child: Text(
-                        'terjual 1260',
-                        style: TextStyle(
-                          color: AppColors.dashColorBlackSecond,
-                          fontSize: 11,
-                          fontWeight: FontWeight.w400,
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 5,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 10, right: 10),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          InkWell(
-                            onTap: () {
-                              if (loveBrandSecond) {
-                                loveBrandSecond = false;
-                              } else {
-                                loveBrandSecond = true;
-                              }
-                              setState(() {});
-                            },
-                            child: Container(
-                              decoration: BoxDecoration(
-                                color: AppColors.dashColorGrey,
-                                borderRadius: BorderRadius.circular(100),
-                              ),
-                              child: Padding(
-                                padding: const EdgeInsets.all(6.0),
-                                child: Image.asset(
-                                  "assets/images/viral-love.png",
-                                  width: 20,
-                                  height: 20,
-                                  color: loveBrandSecond
-                                      ? AppColors.dashColorOrange
-                                      : AppColors.dashColorBlackSecond,
-                                ),
-                              ),
-                            ),
-                          ),
-                          const SizedBox(
-                            width: 15,
-                          ),
-                          Container(
-                            padding: const EdgeInsets.only(
-                                left: 10, right: 10, top: 5, bottom: 5),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(6),
-                              color: AppColors.dashColorWhite,
-                              border: Border.all(
-                                color: AppColors.dashColorOrange,
-                              ),
-                            ),
-                            child: const Text(
-                              '+ Keranjang',
+                      Padding(
+                        padding: const EdgeInsets.only(left: 10, right: 10),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const Text(
+                              'Rp135.000',
                               style: TextStyle(
-                                color: AppColors.dashColorOrange,
-                                fontSize: 11,
+                                color: AppColors.dashColorBlack,
+                                fontSize: 13,
                                 fontWeight: FontWeight.w700,
                               ),
                             ),
-                          ),
-                        ],
+                            Row(
+                              children: [
+                                Container(
+                                  width: 1,
+                                  height: 20,
+                                  color: AppColors.dashColorBlackSecond,
+                                ),
+                                const SizedBox(
+                                  width: 10,
+                                ),
+                                const Text(
+                                  '400g',
+                                  style: TextStyle(
+                                    color: AppColors.dashColorBlack,
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w700,
+                                  ),
+                                ),
+                              ],
+                            )
+                          ],
+                        ),
                       ),
-                    )
-                  ],
+                      const SizedBox(
+                        height: 5,
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.only(left: 10, right: 10),
+                        child: Text(
+                          'terjual 1260',
+                          style: TextStyle(
+                            color: AppColors.dashColorBlackSecond,
+                            fontSize: 11,
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 5,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 10, right: 10),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            InkWell(
+                              onTap: () {
+                                if (loveBrandSecond) {
+                                  loveBrandSecond = false;
+                                } else {
+                                  loveBrandSecond = true;
+                                }
+                                setState(() {});
+                              },
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: AppColors.dashColorGrey,
+                                  borderRadius: BorderRadius.circular(100),
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(6.0),
+                                  child: Image.asset(
+                                    "assets/images/viral-love.png",
+                                    width: 20,
+                                    height: 20,
+                                    color: loveBrandSecond
+                                        ? AppColors.dashColorOrange
+                                        : AppColors.dashColorBlackSecond,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            const SizedBox(
+                              width: 15,
+                            ),
+                            Container(
+                              padding: const EdgeInsets.only(
+                                  left: 10, right: 10, top: 5, bottom: 5),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(6),
+                                color: AppColors.dashColorWhite,
+                                border: Border.all(
+                                  color: AppColors.dashColorOrange,
+                                ),
+                              ),
+                              child: const Text(
+                                '+ Keranjang',
+                                style: TextStyle(
+                                  color: AppColors.dashColorOrange,
+                                  fontSize: 11,
+                                  fontWeight: FontWeight.w700,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
                 ),
               ),
-              Container(
-                height: size.height * 0.38,
-                width: size.width * 0.43,
-                decoration: const BoxDecoration(
-                  borderRadius: BorderRadius.only(
-                      topLeft: Radius.zero,
-                      topRight: Radius.circular(10),
-                      bottomLeft: Radius.circular(10),
-                      bottomRight: Radius.zero),
-                  color: AppColors.dashColorWhite,
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Image.asset("assets/images/viral-2.png"),
-                    Container(
-                      width: size.width,
-                      height: 1,
-                      color: AppColors.dashColorBlackSecond,
+              InkWell(
+                onTap: () {
+                  //! Screen Detail Product 3
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const DetailProductTree(),
                     ),
-                    const SizedBox(
-                      height: 5,
-                    ),
-                    const Padding(
-                      padding: EdgeInsets.only(left: 10, right: 10),
-                      child: Text(
-                        'Sariwangi - Teh Celup Asli',
-                        style: TextStyle(
-                          color: AppColors.dashColorBlack,
-                          fontSize: 11,
-                          fontWeight: FontWeight.w400,
+                  );
+                },
+                child: Container(
+                  height: size.height * 0.38,
+                  width: size.width * 0.43,
+                  decoration: const BoxDecoration(
+                    borderRadius: BorderRadius.only(
+                        topLeft: Radius.zero,
+                        topRight: Radius.circular(10),
+                        bottomLeft: Radius.circular(10),
+                        bottomRight: Radius.zero),
+                    color: AppColors.dashColorWhite,
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Image.asset("assets/images/viral-2.png"),
+                      Container(
+                        width: size.width,
+                        height: 1,
+                        color: AppColors.dashColorBlackSecond,
+                      ),
+                      const SizedBox(
+                        height: 5,
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.only(left: 10, right: 10),
+                        child: Text(
+                          'Sariwangi - Teh Celup Asli',
+                          style: TextStyle(
+                            color: AppColors.dashColorBlack,
+                            fontSize: 11,
+                            fontWeight: FontWeight.w400,
+                          ),
                         ),
                       ),
-                    ),
-                    const SizedBox(
-                      height: 15,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 10, right: 10),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          const Text(
-                            'Rp135.000',
-                            style: TextStyle(
-                              color: AppColors.dashColorBlack,
-                              fontSize: 13,
-                              fontWeight: FontWeight.w700,
-                            ),
-                          ),
-                          Row(
-                            children: [
-                              Container(
-                                width: 1,
-                                height: 20,
-                                color: AppColors.dashColorBlackSecond,
-                              ),
-                              const SizedBox(
-                                width: 10,
-                              ),
-                              const Text(
-                                '400g',
-                                style: TextStyle(
-                                  color: AppColors.dashColorBlack,
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.w700,
-                                ),
-                              ),
-                            ],
-                          )
-                        ],
+                      const SizedBox(
+                        height: 15,
                       ),
-                    ),
-                    const SizedBox(
-                      height: 5,
-                    ),
-                    const Padding(
-                      padding: EdgeInsets.only(left: 10, right: 10),
-                      child: Text(
-                        'terjual 1260',
-                        style: TextStyle(
-                          color: AppColors.dashColorBlackSecond,
-                          fontSize: 11,
-                          fontWeight: FontWeight.w400,
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 5,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 10, right: 10),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          InkWell(
-                            onTap: () {
-                              if (loveBrandOne) {
-                                loveBrandOne = false;
-                              } else {
-                                loveBrandOne = true;
-                              }
-                              setState(() {});
-                            },
-                            child: Container(
-                              decoration: BoxDecoration(
-                                color: AppColors.dashColorGrey,
-                                borderRadius: BorderRadius.circular(100),
-                              ),
-                              child: Padding(
-                                padding: const EdgeInsets.all(6.0),
-                                child: Image.asset(
-                                  "assets/images/viral-love.png",
-                                  width: 20,
-                                  height: 20,
-                                  color: loveBrandOne
-                                      ? AppColors.dashColorOrange
-                                      : AppColors.dashColorBlackSecond,
-                                ),
-                              ),
-                            ),
-                          ),
-                          const SizedBox(
-                            width: 15,
-                          ),
-                          Container(
-                            padding: const EdgeInsets.only(
-                                left: 10, right: 10, top: 5, bottom: 5),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(6),
-                              color: AppColors.dashColorWhite,
-                              border: Border.all(
-                                color: AppColors.dashColorOrange,
-                              ),
-                            ),
-                            child: const Text(
-                              '+ Keranjang',
+                      Padding(
+                        padding: const EdgeInsets.only(left: 10, right: 10),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const Text(
+                              'Rp135.000',
                               style: TextStyle(
-                                color: AppColors.dashColorOrange,
-                                fontSize: 11,
+                                color: AppColors.dashColorBlack,
+                                fontSize: 13,
                                 fontWeight: FontWeight.w700,
                               ),
                             ),
-                          ),
-                        ],
+                            Row(
+                              children: [
+                                Container(
+                                  width: 1,
+                                  height: 20,
+                                  color: AppColors.dashColorBlackSecond,
+                                ),
+                                const SizedBox(
+                                  width: 10,
+                                ),
+                                const Text(
+                                  '400g',
+                                  style: TextStyle(
+                                    color: AppColors.dashColorBlack,
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w700,
+                                  ),
+                                ),
+                              ],
+                            )
+                          ],
+                        ),
                       ),
-                    )
-                  ],
+                      const SizedBox(
+                        height: 5,
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.only(left: 10, right: 10),
+                        child: Text(
+                          'terjual 1260',
+                          style: TextStyle(
+                            color: AppColors.dashColorBlackSecond,
+                            fontSize: 11,
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 5,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 10, right: 10),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            InkWell(
+                              onTap: () {
+                                if (loveBrandOne) {
+                                  loveBrandOne = false;
+                                } else {
+                                  loveBrandOne = true;
+                                }
+                                setState(() {});
+                              },
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: AppColors.dashColorGrey,
+                                  borderRadius: BorderRadius.circular(100),
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(6.0),
+                                  child: Image.asset(
+                                    "assets/images/viral-love.png",
+                                    width: 20,
+                                    height: 20,
+                                    color: loveBrandOne
+                                        ? AppColors.dashColorOrange
+                                        : AppColors.dashColorBlackSecond,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            const SizedBox(
+                              width: 15,
+                            ),
+                            Container(
+                              padding: const EdgeInsets.only(
+                                  left: 10, right: 10, top: 5, bottom: 5),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(6),
+                                color: AppColors.dashColorWhite,
+                                border: Border.all(
+                                  color: AppColors.dashColorOrange,
+                                ),
+                              ),
+                              child: const Text(
+                                '+ Keranjang',
+                                style: TextStyle(
+                                  color: AppColors.dashColorOrange,
+                                  fontSize: 11,
+                                  fontWeight: FontWeight.w700,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
                 ),
               ),
             ],
@@ -3215,26 +3239,37 @@ class _DashboardScreenState extends State<DashboardScreen> {
       scrollDirection: Axis.horizontal,
       child: Row(
         children: producBrands
-            .map((e) => Padding(
-                  padding: const EdgeInsets.only(right: 10),
-                  child: Column(
-                    children: [
-                      Image.asset(
-                        e.image.toString(),
-                        width: size.width * 0.25,
+            .map((e) => InkWell(
+                  onTap: () {
+                    //! Screen Detail Product 2
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const DetailProductSecond(),
                       ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      Text(
-                        e.text.toString(),
-                        style: const TextStyle(
-                          color: AppColors.dashColorBlack,
-                          fontSize: 10,
-                          fontWeight: FontWeight.w400,
+                    );
+                  },
+                  child: Padding(
+                    padding: const EdgeInsets.only(right: 10),
+                    child: Column(
+                      children: [
+                        Image.asset(
+                          e.image.toString(),
+                          width: size.width * 0.25,
                         ),
-                      ),
-                    ],
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        Text(
+                          e.text.toString(),
+                          style: const TextStyle(
+                            color: AppColors.dashColorBlack,
+                            fontSize: 10,
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ))
             .toList(),
@@ -3256,20 +3291,6 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         builder: (context) => const DetailProductOne(),
                       ),
                     );
-                    //! Screen Detail Product 2
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(
-                    //     builder: (context) => const DetailProductSecond(),
-                    //   ),
-                    // );
-                    //! Screen Detail Product 3
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(
-                    //     builder: (context) => const DetailProductTree(),
-                    //   ),
-                    // );
                   },
                   child: Column(
                     children: [
